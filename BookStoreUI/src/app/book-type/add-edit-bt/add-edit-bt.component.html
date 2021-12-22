@@ -1,0 +1,23 @@
+<div class="form-group row">
+    <label class="col-sm-2 col-form-label">Book Category</label>
+    <div class="col-sm-10">
+        <select class="form-control" [(ngModel)]="BookCategory">
+            <option>--Select--</option>
+            <option *ngFor="let bcName of BookCategoryList">
+                {{bcName.Name}}
+            </option>
+        </select>
+    </div>
+    <label class="col-sm-2 col-form-label">Book Type</label>
+    <div class="col-sm-10">
+        <input type="text" class="form-control" [(ngModel)]="Name" placeholder="Enter Book Type Name">
+    </div>
+</div>
+
+<button (click)="addBookType()" *ngIf="booktyp.ID==0" class="btn btn-primary">
+    Add
+</button>
+
+<button (click)="updateBookType()" *ngIf="booktyp.ID!=0" class="btn btn-primary">
+    Update
+</button>
