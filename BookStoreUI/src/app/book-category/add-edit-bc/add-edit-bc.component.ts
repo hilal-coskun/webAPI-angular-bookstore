@@ -22,8 +22,9 @@ export class AddEditBcComponent implements OnInit {
   }
 
   addBookCategory(){
-    var val = {ID:this.ID,
-               Name:this.Name};
+    var val = {
+      ID:this.ID,
+      Name:this.Name};
     this.service.addBookCtg(val).subscribe(res=>{
       alert(res.toString());
     });
@@ -31,8 +32,9 @@ export class AddEditBcComponent implements OnInit {
 
   updateBookCategory(){
     console.log(this.bookcat) 
-    var val = {ID: this.ID,
-               Name: this.Name};
+    var val = {
+      ID: this.ID,
+      Name: this.Name};
     this.service.updateBookCtg(val).subscribe(res=>{
       alert(res.toString());
     });

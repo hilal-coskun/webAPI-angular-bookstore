@@ -28,7 +28,6 @@ import { ShowCtComponent } from './contact/show-ct/show-ct.component';
 import { BookComponent } from './book/book.component';
 import { AddEditBkComponent } from './book/add-edit-bk/add-edit-bk.component';
 import { ShowBkComponent } from './book/show-bk/show-bk.component';
-import { BookcatalogComponent } from './bookcatalog/bookcatalog.component';
 
 
 @NgModule({
@@ -54,8 +53,7 @@ import { BookcatalogComponent } from './bookcatalog/bookcatalog.component';
     ShowCtComponent,
     BookComponent,
     AddEditBkComponent,
-    ShowBkComponent,
-    BookcatalogComponent
+    ShowBkComponent
   ],
   imports: [
     BrowserModule,
