@@ -34,7 +34,7 @@
     <tbody>
         <tr *ngFor="let dataItem of BookPublisherList">
             <td>{{dataItem.ID}}</td>
-            <td>{{dataItem.ContactID}}</td>
+            <td>{{dataItem.Contact}}</td>
             <td>{{dataItem.About}}</td>
             <td>
                 <button type="button" class="btn btn-light mr-1" data-bs-toggle="modal" data-bs-target="#staticBackdrop" (click)="editClick(dataItem)" data-backdrop="static" data-keyboard="false">

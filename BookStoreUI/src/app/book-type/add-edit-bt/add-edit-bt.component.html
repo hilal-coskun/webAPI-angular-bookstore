@@ -1,9 +1,9 @@
 <div class="form-group row">
     <label class="col-sm-2 col-form-label">Book Category</label>
     <div class="col-sm-10">
-        <select class="form-control" [(ngModel)]="BookCategory">
+        <select class="form-control" [(ngModel)]="BookCategoryID">
             <option>--Select--</option>
-            <option *ngFor="let bcName of BookCategoryList">
+            <option [ngValue] = "bcName.ID" *ngFor="let bcName of BookCategoryList">
                 {{bcName.Name}}
             </option>
         </select>
