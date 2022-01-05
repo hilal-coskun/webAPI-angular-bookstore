@@ -59,7 +59,7 @@ export class SharedService {
     return this.http.delete(this.APIUrl+'/bookpublisher/'+val);
   }
   GetAllContact():Observable<any[]>{
-    return this.http.get<any>(this.APIUrl+'/bookpublisher/GetAllContact')
+    return this.http.get<any[]>(this.APIUrl+'/bookpublisher/GetAllContact')
   }
 
   //Contact
