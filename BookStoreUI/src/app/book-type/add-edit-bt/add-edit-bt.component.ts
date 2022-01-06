@@ -12,7 +12,6 @@ export class AddEditBtComponent implements OnInit {
 
   @Input() booktyp:any;
   ID:number;
-  BookCategoryItem:string;
   BookCategoryID:string;
   Name:string;
 
@@ -42,7 +41,7 @@ export class AddEditBtComponent implements OnInit {
       Name: this.Name
     };
     this.service.addBookTyp(val).subscribe(res =>{
-      //alert(res.toString());
+      alert(res.toString());
     });
   }
 

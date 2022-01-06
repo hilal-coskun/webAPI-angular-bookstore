@@ -1,1 +1,122 @@
-<p>add-edit-bk works!</p>
+<div class="form-group row">
+    <div>
+        <label class="col-sm-2 col-form-label">Book Category</label>
+        <div class="col-sm-10">
+            <select class="form-control" [(ngModel)]="BookCategoryID">
+                <option>--Select--</option>
+                <option [ngValue] = "bookItem.ID" *ngFor="let bookItem of BookCategoryList">
+                    {{bookItem.Name}}
+                </option>
+            </select>
+        </div>
+    </div>
+    
+    <div>
+        <label class="col-sm-2 col-form-label">Book Type</label>
+        <div class="col-sm-10">
+            <select class="form-control" [(ngModel)]="BookTypeID">
+                <option>--Select--</option>
+                <option [ngValue] = "bookItem.ID" *ngFor="let bookItem of BookTypeList">
+                    {{bookItem.Name}}
+                </option>
+            </select>
+        </div>
+    </div>
+    
+    
+    <div>
+        <label class="col-sm-2 col-form-label">Language</label>
+        <div class="col-sm-10">
+            <select class="form-control" [(ngModel)]="LanguageID">
+                <option>--Select--</option>
+                <option [ngValue] = "bookItem.ID" *ngFor="let bookItem of LanguageList">
+                    {{bookItem.Name}}
+                </option>
+            </select>
+        </div>
+    </div>
+    
+
+    <div>
+        <label class="col-sm-2 col-form-label">Author</label>
+        <div class="col-sm-10">
+            <select class="form-control" [(ngModel)]="AuthorID">
+                <option>--Select--</option>
+                <option [ngValue] = "bookItem.ID" *ngFor="let bookItem of AuthorList">
+                    {{bookItem.Name}}
+                </option>
+            </select>
+        </div>
+    </div>
+    
+    <div>
+        <label class="col-sm-2 col-form-label">Translator</label>
+        <div class="col-sm-10">
+            <select class="form-control" [(ngModel)]="TranslatorID">
+                <option>--Select--</option>
+                <option [ngValue] = "bookItem.ID" *ngFor="let bookItem of TranslatorList">
+                    {{bookItem.Name}}
+                </option>
+            </select>
+        </div>
+    </div>
+
+    <div>
+        <label class="col-sm-2 col-form-label">Paper Type</label>
+        <div class="col-sm-10">
+            <select class="form-control" [(ngModel)]="PaperTypeID">
+                <option>--Select--</option>
+                <option [ngValue] = "bookItem.ID" *ngFor="let bookItem of PaperTypeList">
+                    {{bookItem.Name}}
+                </option>
+            </select>
+        </div>
+    </div>
+    <div>
+        <div>
+            <label class="col-sm-2 col-form-label">Price</label>
+            <div class="col-sm-10">
+                <input type="text" class="form-control" [(ngModel)]="Price" placeholder="Enter Price">
+            </div>
+        </div>
+    </div>
+    
+    
+    <div>
+        <label class="col-sm-2 col-form-label">ISBN</label>
+        <div class="col-sm-10">
+            <input type="text" class="form-control" [(ngModel)]="ISBN" placeholder="Enter ISBN">
+        </div>
+    </div>
+    
+
+    <div>
+        <label class="col-sm-2 col-form-label">AmountOfStock</label>
+        <div class="col-sm-10">
+            <input type="text" class="form-control" [(ngModel)]="AmountOfStock" placeholder="Enter AmountOfStock">
+        </div>
+    </div>
+    
+    <div>
+        <label class="col-sm-2 col-form-label">PagesOfNumber</label>
+        <div class="col-sm-10">
+            <input type="text" class="form-control" [(ngModel)]="PagesOfNumber" placeholder="Enter PagesOfNumber">
+        </div>
+    </div>
+    
+    <div>
+        <label class="col-sm-2 col-form-label">Size</label>
+        <div class="col-sm-10">
+            <input type="text" class="form-control" [(ngModel)]="Size" placeholder="Enter Size">
+        </div>
+    </div>
+    
+</div>
+
+<button (click)="addBook()" *ngIf="book.ID==0" class="btn btn-primary">
+    Add
+</button>
+
+<button (click)="updateBook()" *ngIf="book.ID!=0" class="btn btn-primary">
+    Update
+</button>

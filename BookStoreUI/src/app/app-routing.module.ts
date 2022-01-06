@@ -1,3 +1,5 @@
+import { AuthorComponent } from './author/author.component';
+import { BookComponent } from './book/book.component';
 import { BookPublisherComponent } from './book-publisher/book-publisher.component';
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
@@ -12,7 +14,9 @@ const routes: Routes = [
   {path:'booktype', component: BookTypeComponent},
   {path:'translator', component:TranslatorComponent},
   {path:'contact', component:ContactComponent},
-  {path: 'bookpublisher', component:BookPublisherComponent}
+  {path: 'bookpublisher', component:BookPublisherComponent},
+  {path: 'book', component:BookComponent},
+  {path: 'author', component:AuthorComponent}
 ];
 
 @NgModule({
